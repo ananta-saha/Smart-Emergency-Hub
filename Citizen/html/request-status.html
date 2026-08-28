@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Status</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="servicesHub">
+    <header>
+        <h2 class="early">Emergency Help Hub</h2>
+        <nav class="serviceNav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="service.html">Services</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>My Emergency Request</h1>
+        <div id="requestBox"></div>
+    </main>
+    <script>
+
+        let requestData = JSON.parse(localStorage.getItem("emergencyRequest"));
+        let box = document.getElementById("requestBox");
+        if (!requestData) {
+            box.innerHTML = `
+        <p>You have no active emergency request.</p>
+        <a href="services.html">
+            <div class="buttons">
+                <a href="service.html">
+            <button type="button" class="primary-btn">Find Emergency Service</button>
+            </a>
+        </a>
+    `;
+        } else {
+            box.innerHTML = `
+        <div class="service-card">
+            <h3>Request Details</h3>
+            <p>
+                <strong>Service:</strong>
+                ${requestData.service}
+            </p>
+            <p>
+                <strong>Emergency Type:</strong>
+                ${requestData.emergencyType}
+            </p>
+            <p>
+                <strong>People:</strong>
+                ${requestData.people}
+            </p>
+            <p>
+                <strong>Vehicles:</strong>
+                ${requestData.vehicles}
+            </p>
+            <p>
+                <strong>Location:</strong>
+                ${requestData.location}
+            </p>
+            <p>
+                <strong>Status:</strong>
+                <span id="status">
+                    ${requestData.status}
+                </span>
+            </p>
+            <button onclick="cancelRequest()">
+                Cancel Request
+            </button>
+        </div>
+    `;
+        }
+
+        function cancelRequest() {
+            let confirmCancel =
+                confirm("Are you sure you want to cancel this request?");
+            if (confirmCancel) {
+                localStorage.removeItem("emergencyRequest");
+                alert("Emergency request cancelled.");
+                location.reload();
+            }
+        }
+    </script>
+    <footer>
+        <p>© 2026 Emergency Finder - Citizen Portal.</p>
+    </footer>
+
+</body>
+
+</html>

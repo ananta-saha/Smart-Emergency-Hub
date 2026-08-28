@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Services</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="servicesHub">
+    <header>
+        <h2 class="early">Emergency Help Hub</h2>
+        <nav class="serviceNav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="request-status.html">My Requests</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Find Emergency Services</h1>
+        <p>Select the emergency service you need.</p>
+        <div class="search-box">
+            <label for="location "></label>
+            <input type="text" id="location" placeholder="Enter your location">
+            <label for="service"></label>
+            <select id="serviceType">
+                <option value="" selected disabled>Select Service</option>
+                <option value="ambulance">Ambulance</option>
+                <option value="fire">Fire Service</option>
+                <option value="police">Police</option>
+                <option value="hospital">Hospital</option>
+            </select>
+            <button onclick="findServices()">Search</button>
+        </div>
+        <div id="serviceResults"></div>
+    </main>
+    <footer>
+        <p>© 2026 Emergency Finder - Citizen Portal.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

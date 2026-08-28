@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Request</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="servicesHub">
+    <header>
+        <h2 class="early">Emergency Help Hub</h2>
+        <nav class="serviceNav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="service.html">Services</a>
+            <a href="request-status.html">My Requests</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <main class="containers">
+        <h1>Send Emergency Request</h1>
+        <form method="post" id="requestForm">
+            <div>
+                <label for="emService">Emergency Service</label>
+                <input type="text" id="emService" name="emService" readonly>
+            </div>
+            <div>
+                <label for="emergencyType">Emergency Type</label>
+                <select id="emergencyType" name="emergencyType">
+                    <option value="" selected disabled>Select Type</option>
+                    <option value="Medical Emergency">Medical Emergency</option>
+                    <option value="Accident">Accident</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Fire">Fire</option>
+                </select>
+            </div>
+            <div>
+                <label for="people">Number of People</label>
+                <input type="number" id="people" min="1">
+            </div>
+            <div>
+                <label for="vehicles">Number of Vehicles</label>
+                <input type="number" id="vehicles" name="vehicles" min="1">
+            </div>
+            <div>
+                <label for="emergencyLocation">Emergency Location</label>
+                <input type="text" id="emergencyLocation" name="emergencyLocation"
+                    placeholder="Enter emergency location">
+            </div>
+            <div>
+                <label for="details">Additional Information</label>
+                <textarea id="details" name="details" placeholder="Describe the emergency"></textarea>
+            </div>
+            <div class="buttons">
+                <a href="request-status.html">
+                    <button type="button" class="primary-btn">Send Emergency Request</button>
+                </a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>© 2026 Emergency Finder - Citizen Portal.</p>
+    </footer>
+
+</body>
+
+</html>

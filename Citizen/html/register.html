@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Registration - Emergency Help Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <h2>🚑 Emergency Finder</h2>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div class="main-container">
+        <form method="post">
+            <h1>Create Account</h1>
+            <p>Register as a citizen to access emergency services</p>
+            <div class="field">
+                <label for="fname">Full Name</label>
+                <input type="text" placeholder="enter your full name" id="fname" name="fname">
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" placeholder="enter your email" id="email" name="email">
+            </div>
+            <div class="field">
+                <label for="phone">Phone</label>
+                <input type="number" placeholder="enter your phone number" id="phone" name="phone">
+            </div>
+            <div class="field">
+                <label for="pass">Password</label>
+                <input type="password" placeholder="create a password" id="pass" name="pass">
+            </div>
+            <div class="field">
+                <label for="cpass">Confirm Password</label>
+                <input type="password" placeholder="confirm your password" id="cpass" name="cpass">
+            </div>
+            <div class="field">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" cols="48"
+                    placeholder="enter your full address"></textarea>
+            </div>
+            <div class="buttons">
+                <a href="login.html">
+                    <button type="button" class="btn-primary">Create
+                        Account</button>
+                </a>
+            </div>
+            <p class="auth-footer">Already have a citizen account?
+                <a href="login.html">Login</a>
+            </p>
+        </form>
+    </div>
+    <footer>
+        <p>© 2026 Emergency Finder - Citizen Portal.</p>
+    </footer>
+</body>
+
+</html>

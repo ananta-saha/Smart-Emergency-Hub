@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f5ff;
+    color: #29243a;
+}
+
+/* Header */
+
+header {
+    background: #33255f;
+    color: white;
+    padding: 22px;
+    text-align: center;
+    border-bottom: 4px solid #ff6b6b;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #ddd6f3;
+}
+
+
+/* Navigation */
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px #ddd8eb;
+}
+
+nav button {
+    background: #6c5ce7;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #ff6b6b;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 25px;
+    margin: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #e1ddef;
+}
+
+.section h2 {
+    color: #33255f;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 10px;
+}
+
+
+/* Dashboard Cards */
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    border-radius: 12px;
+    color: white;
+}
+
+/* Different colors for cards */
+
+.card:nth-child(1) {
+    background: #6c5ce7;
+}
+
+.card:nth-child(2) {
+    background: #00b894;
+}
+
+.card:nth-child(3) {
+    background: #0984e3;
+}
+
+.card:nth-child(4) {
+    background: #ff7675;
+}
+
+.card h3 {
+    margin: 5px;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/* Tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background: #33255f;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #ddd8eb;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background: #faf9ff;
+}
+
+tr:hover {
+    background: #f0edff;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 8px 14px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #6c5ce7;
+    color: white;
+}
+
+button:hover {
+    background: #ff6b6b;
+}
+
+
+/* Forms */
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #33255f;
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 95%;
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #d2cce3;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #6c5ce7;
+}
+
+
+/* Login */
+
+.login-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 35px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px #d9d2eb;
+    border-top: 6px solid #6c5ce7;
+}
+
+.login-box h1 {
+    color: #33255f;
+    font-size: 26px;
+}
+
+.login-box h2 {
+    color: #ff6b6b;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 11px;
+    margin-bottom: 15px;
+}
+
+.login-box button {
+    background: #6c5ce7;
+    color: white;
+    padding: 11px 40px;
+    font-size: 15px;
+}
+
+.login-box button:hover {
+    background: #ff6b6b;
+}
+
+#loginMessage {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    background: #33255f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>🚨 Emergency Help Hub</h1>
+        <div>
+            Organization<button onclick="location.href='../index.html'">Logout</button>
+        </div>
+
+    </header>
+
+    <nav>
+        <a href="providers.html">👥 Providers</a>
+        <a href="services.html">🚑 Services</a>
+        <a href="requests.html">🚨 Requests</a>
+        <a href="funds.html">💰 Funds</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="reports.html">📊 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+    </nav>
+
+    <main>
+
+        <h2>Dashboard</h2>
+        <p>
+            Welcome to your organization dashboard.
+        </p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Service Providers</h3>
+                <h2>24</h2>
+            </div>
+
+            <div class="card">
+                <h3>Active Services</h3>
+                <h2>8</h2>
+            </div>
+
+            <div class="card">
+                <h3>Emergency Requests</h3>
+                <h2>16</h2>
+            </div>
+
+            <div class="card">
+                <h3>Collected Fund</h3>
+                <h2>৳85,000</h2>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Recent Emergency Requests</h3>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Service</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+                <tr>
+                    <td>#1001</td>
+                    <td>Ambulance</td>
+                    <td>Dhanmondi</td>
+                    <td>Pending</td>
+                    <td>
+                        <button onclick="viewRequest()">View</button>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>#1002</td>
+                    <td>Blood</td>
+                    <td>Mirpur</td>
+                    <td>Accepted</td>
+                    <td>
+                        <button onclick="viewRequest()">View</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Emergency Help Hub | Organization Management
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

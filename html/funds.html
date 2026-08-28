@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Fund Management</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>🚨 Emergency Help Hub</h1>
+        <div>
+            Organization<button onclick="location.href='../index.html'">Logout</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="providers.html">👥 Providers</a>
+        <a href="services.html">🚑 Services</a>
+        <a href="requests.html">🚨 Requests</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="reports.html">📊 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+    </nav>
+
+    <main>
+        <h2>Fund Management</h2>
+        <p>Manage emergency fundraising campaigns.</p>
+
+        <div class="box">
+            <h3>Create Fund Campaign</h3>
+            <label for="campaignName">Campaign Name</label>
+            <input type="text" id="campaignName" name="campaignName" placeholder="Campaign Name">
+
+            <label for="targetAmount">Target Amount</label>
+            <input type="number" id="targetAmount" name="targetAmount" placeholder="Target Amount">
+
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" name="endDate">
+
+            <button onclick="createFund()">Create Campaign</button>
+        </div>
+
+        <div class="fund-card">
+            <h3>Emergency Patient Support</h3>
+            <p>Target: ৳100,000</p>
+            <p>Collected: ৳65,000</p>
+            <p>Status: Active</p>
+
+            <button onclick="manageFund()">Manage</button>
+        </div>
+
+        <div class="fund-card">
+            <h3>Blood Donation Support</h3>
+            <p>Target: ৳50,000</p>
+            <p>Collected: ৳50,000</p>
+            <p>Status: Completed</p>
+
+            <button onclick="viewFund()">View</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Emergency Help Hub |
+            Organization Management
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

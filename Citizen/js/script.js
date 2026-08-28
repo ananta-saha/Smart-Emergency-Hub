@@ -29,7 +29,7 @@ let box = document.getElementById("requestBox");
 if (!requestData) {
     box.innerHTML = `
         <p>You have no active emergency request.</p>
-        <a href="services.html">
+        <a href="service.html">
             <div class="buttons">
                 <a href="service.html">
             <button type="button" class="primary-btn">Find Emergency Service</button>

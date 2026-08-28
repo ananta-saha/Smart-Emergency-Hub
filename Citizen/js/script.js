@@ -23,6 +23,7 @@ function findServices() {
 function sendRequest() {
     window.location.href = "emergency-request.html";
 }
+
 let requestData = JSON.parse(localStorage.getItem("emergencyRequest"));
 let box = document.getElementById("requestBox");
 if (!requestData) {

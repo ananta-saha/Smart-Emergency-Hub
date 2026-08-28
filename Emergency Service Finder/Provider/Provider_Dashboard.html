@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Provider Dashboard</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Provider Dashboard</h1>
+                    <p>Welcome, ABC Ambulance Service</p>
+                </div>
+
+                <div class="status-badge">
+                    Available
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+                    <h3>Pending Requests</h3>
+                    <p>3</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Available Vehicles</h3>
+                    <p>5</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Service Range</h3>
+                    <p>10 KM</p>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Today's Requests</h3>
+                    <p>8</p>
+                </div>
+
+            </div>
+
+
+            <!-- Service Information -->
+            <div class="section-box">
+
+                <h2>Service Information</h2>
+
+                <div class="service-info">
+
+                    <p>
+                        <strong>Service Type:</strong>
+                        Ambulance
+                    </p>
+
+                    <p>
+                        <strong>Base Area:</strong>
+                        Dhanmondi
+                    </p>
+
+                    <p>
+                        <strong>Working Time:</strong>
+                        24 Hours
+                    </p>
+
+                    <p>
+                        <strong>Current Status:</strong>
+                        Available
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Recent Requests -->
+            <div class="section-box">
+
+                <h2>Recent Emergency Requests</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Location</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#101</td>
+                            <td>Dhanmondi</td>
+                            <td>10:30 AM</td>
+                            <td>
+                                <span class="pending">
+                                    Pending
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#102</td>
+                            <td>Kalabagan</td>
+                            <td>09:50 AM</td>
+                            <td>
+                                <span class="accepted">
+                                    Accepted
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#103</td>
+                            <td>Farmgate</td>
+                            <td>09:20 AM</td>
+                            <td>
+                                <span class="completed">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

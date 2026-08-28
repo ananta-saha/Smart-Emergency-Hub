@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Provider Availability</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html" class="active">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Availability Management</h1>
+                    <p>Update your current service status and working time.</p>
+                </div>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Current Service Status</h2>
+
+                <form id="availabilityForm">
+
+                    <div class="status-options">
+
+                        <label class="status-option">
+                            <input type="radio" name="status" value="Available" checked>
+                            Available
+                        </label>
+
+                        <label class="status-option">
+                            <input type="radio" name="status" value="Busy">
+                            Busy
+                        </label>
+
+                        <label class="status-option">
+                            <input type="radio" name="status" value="Offline">
+                            Offline
+                        </label>
+
+                    </div>
+
+
+                    <h2 class="availability-title">
+                        Working Time
+                    </h2>
+
+
+                    <div class="time-container">
+
+                        <div class="form-group">
+
+                            <label>
+                                Start Time
+                            </label>
+
+                            <input type="time" id="startTime">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                End Time
+                            </label>
+
+                            <input type="time" id="endTime">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="full-day-option">
+
+                        <input type="checkbox" id="fullDay">
+
+                        <label for="fullDay">
+                            Available 24 Hours
+                        </label>
+
+                    </div>
+
+
+                    <p id="availabilityMessage"></p>
+
+
+                    <button type="submit" class="primary-btn">
+                        Update Availability
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Current Availability Summary</h2>
+
+                <div class="availability-summary">
+
+                    <p>
+                        <strong>Status:</strong>
+                        <span id="summaryStatus">
+                            Available
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>Working Time:</strong>
+                        <span id="summaryTime">
+                            Not Set
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

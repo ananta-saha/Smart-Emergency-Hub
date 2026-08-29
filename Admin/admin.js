@@ -1,44 +1,134 @@
-function adminLogin(event) {
+function showRegister() {
 
-    event.preventDefault();
+    document.getElementById("loginBox").style.display = "none";
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    document.getElementById("registerBox").style.display = "block";
+}
 
-    if (username == "admin" && password == "1234") {
 
-        window.location.href = "admin.html";
+function showLogin() {
 
-    } else {
+    document.getElementById("registerBox").style.display = "none";
+
+    document.getElementById("loginBox").style.display = "block";
+}
+
+
+function registerAdmin() {
+
+    let password =
+        document.getElementById("password").value;
+
+    let confirmPassword =
+        document.getElementById("confirmPassword").value;
+
+
+    if (password != confirmPassword) {
+
+        document.getElementById("registerMessage").innerHTML =
+            "Password does not match.";
+
+        return false;
+    }
+
+
+    return true;
+}
+
+
+
+function loginAdmin() {
+
+    let username =
+        document.getElementById("loginUsername").value;
+
+    let password =
+        document.getElementById("loginPassword").value;
+
+
+    if (username == "" || password == "") {
 
         document.getElementById("loginMessage").innerHTML =
-            "Invalid username or password";
+            "Please enter username and password.";
 
-    }
-}
-function showSection(sectionName) {
-
-    let sections = document.getElementsByClassName("section");
-
-    for (let i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
+        return false;
     }
 
-    document.getElementById(sectionName).style.display = "block";
+
+    return true;
 }
+
 
 
 function verifyUser(statusId) {
 
-    document.getElementById(statusId).innerHTML = "Verified";
+    document.getElementById(statusId).innerHTML =
+        "Verified";
 
-    alert("User verified successfully.");
+    alert("Account verified successfully.");
 }
+
+
+function rejectUser(statusId) {
+
+    document.getElementById(statusId).innerHTML =
+        "Rejected";
+
+    alert("Account rejected.");
+}
+
+
+
+function sendNotification(event) {
+
+    event.preventDefault();
+
+    let title =
+        document.getElementById("notificationTitle").value;
+
+    let message =
+        document.getElementById("notificationMessage").value;
+
+    let table =
+        document.getElementById("notificationTable");
+
+    let row = table.insertRow();
+
+    let cell1 = row.insertCell(0);
+
+    let cell2 = row.insertCell(1);
+
+    let cell3 = row.insertCell(2);
+
+    cell1.innerHTML = title;
+
+    cell2.innerHTML = message;
+
+    cell3.innerHTML =
+        '<button onclick="deleteNotification(this)">Delete</button>';
+
+    document.getElementById("notificationTitle").value = "";
+
+    document.getElementById("notificationMessage").value = "";
+
+    alert("Notification sent successfully.");
+}
+
+
+function deleteNotification(button) {
+
+    let row =
+        button.parentElement.parentElement;
+
+    row.remove();
+}
+
 
 
 function approveFund(statusId) {
 
-    document.getElementById(statusId).innerHTML = "Approved";
+    document.getElementById(statusId).innerHTML =
+        "Approved";
 
     alert("Fund request approved.");
 }
@@ -46,100 +136,106 @@ function approveFund(statusId) {
 
 function rejectFund(statusId) {
 
-    document.getElementById(statusId).innerHTML = "Rejected";
+    document.getElementById(statusId).innerHTML =
+        "Rejected";
 
     alert("Fund request rejected.");
 }
 
 
-function deleteRow(button) {
 
-    let row = button.parentElement.parentElement;
-
-    row.remove();
-
-    alert("Record deleted.");
-}
-
-
-function addNotification(event) {
+function addProvider(event) {
 
     event.preventDefault();
 
-    let title = document.getElementById("notificationTitle").value;
-    let message = document.getElementById("notificationMessage").value;
+    let name =
+        document.getElementById("providerName").value;
 
-    let table = document.getElementById("notificationTable");
+    let type =
+        document.getElementById("serviceType").value;
+
+    let phone =
+        document.getElementById("providerPhone").value;
+
+    let table =
+        document.getElementById("providerTable");
 
     let row = table.insertRow();
 
     let cell1 = row.insertCell(0);
+
     let cell2 = row.insertCell(1);
+
     let cell3 = row.insertCell(2);
 
-    cell1.innerHTML = title;
-    cell2.innerHTML = message;
-
-    cell3.innerHTML =
-        '<button onclick="deleteRow(this)">Delete</button>';
-
-    document.getElementById("notificationTitle").value = "";
-    document.getElementById("notificationMessage").value = "";
-
-    alert("Notification added.");
-}
-
-
-function addRecord(event) {
-
-    event.preventDefault();
-
-    let name = document.getElementById("recordName").value;
-    let type = document.getElementById("recordType").value;
-    let phone = document.getElementById("recordPhone").value;
-
-    let table = document.getElementById("recordTable");
-
-    let row = table.insertRow();
-
-    let cell1 = row.insertCell(0);
-    let cell2 = row.insertCell(1);
-    let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
 
     cell1.innerHTML = name;
+
     cell2.innerHTML = type;
+
     cell3.innerHTML = phone;
 
     cell4.innerHTML =
-        '<button onclick="editRecord(this)">Edit</button>' +
-        '<button onclick="deleteRow(this)">Delete</button>';
+        '<button onclick="editProvider(this)">Edit</button>' +
+        '<button onclick="deleteProvider(this)">Delete</button>';
 
-    document.getElementById("recordName").value = "";
-    document.getElementById("recordPhone").value = "";
+    document.getElementById("providerName").value = "";
 
-    alert("Record added.");
+    document.getElementById("providerPhone").value = "";
+
+    alert("Service provider added.");
 }
 
 
-function editRecord(button) {
 
-    let row = button.parentElement.parentElement;
+function editProvider(button) {
 
-    let name = prompt("Enter new name:", row.cells[0].innerHTML);
+    let row =
+        button.parentElement.parentElement;
 
-    if (name != null) {
-        row.cells[0].innerHTML = name;
+    let newName =
+        prompt("Enter provider name:",
+        row.cells[0].innerHTML);
+
+    if (newName != null) {
+
+        row.cells[0].innerHTML = newName;
     }
 
-    let phone = prompt("Enter new phone:", row.cells[2].innerHTML);
 
-    if (phone != null) {
-        row.cells[2].innerHTML = phone;
+    let newPhone =
+        prompt("Enter phone number:",
+        row.cells[2].innerHTML);
+
+    if (newPhone != null) {
+
+        row.cells[2].innerHTML = newPhone;
     }
-
-    alert("Record updated.");
 }
 
 
-showSection("dashboard");
+function deleteProvider(button) {
+
+    let row =
+        button.parentElement.parentElement;
+
+    row.remove();
+
+    alert("Service provider deleted.");
+}
+
+
+function showSection(sectionName) {
+
+    let sections =
+        document.getElementsByClassName("section");
+
+    for (let i = 0; i < sections.length; i++) {
+
+        sections[i].style.display = "none";
+    }
+
+    document.getElementById(sectionName).style.display =
+        "block";
+}

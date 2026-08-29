@@ -5,7 +5,7 @@ body {
     color: #29243a;
 }
 
-/* Header */
+
 
 header {
     background: #33255f;
@@ -26,7 +26,7 @@ header p {
 }
 
 
-/* Navigation */
+
 
 nav {
     background: white;
@@ -50,7 +50,6 @@ nav button:hover {
 }
 
 
-/* Sections */
 
 .section {
     padding: 25px;
@@ -67,7 +66,7 @@ nav button:hover {
 }
 
 
-/* Dashboard Cards */
+
 
 .cards {
     display: flex;
@@ -82,7 +81,7 @@ nav button:hover {
     color: white;
 }
 
-/* Different colors for cards */
+
 
 .card:nth-child(1) {
     background: #6c5ce7;
@@ -111,7 +110,7 @@ nav button:hover {
 }
 
 
-/* Tables */
+
 
 table {
     width: 100%;
@@ -140,7 +139,6 @@ tr:hover {
 }
 
 
-/* Buttons */
 
 button {
     padding: 8px 14px;
@@ -157,7 +155,6 @@ button:hover {
 }
 
 
-/* Forms */
 
 form {
     max-width: 600px;
@@ -190,7 +187,6 @@ textarea:focus {
 }
 
 
-/* Login */
 
 .login-box {
     width: 400px;
@@ -235,7 +231,7 @@ textarea:focus {
 }
 
 
-/* Footer */
+
 
 footer {
     background: #33255f;
@@ -247,4 +243,11 @@ footer {
 
 footer p {
     margin: 5px;
+}
+.login-box p {
+    color: #555;
+}
+
+#registrationBox {
+    margin-top: 30px;
 }

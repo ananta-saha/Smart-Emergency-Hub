@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Service Providers</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🚨 Emergency Help Hub</h1>
+        <div>
+            Organization<button onclick="location.href='../index.html'">Logout</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="services.html">🚑 Services</a>
+        <a href="requests.html">🚨 Requests</a>
+        <a href="funds.html">💰 Funds</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="reports.html">📊 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+    </nav>
+
+    <main>
+        <h2>Service Providers</h2>
+        <p>Add and manage emergency service providers.</p>
+
+        <div class="box">
+            <h3>Add Provider</h3>
+            <label for="providerName">Provider Name</label>
+            <input type="text" id="providerName" name="providerName" placeholder="Provider Name">
+
+            <label for="serviceType">Service Type</label>
+            <select id="serviceType" name="serviceType">
+                <option value="Select Service">Select Service</option>
+                <option value="Ambulance">Ambulance</option>
+                <option value="Hospital">Hospital</option>
+                <option value="Fire Service">Fire Service</option>
+                <option value="Police">Police</option>
+                <option value="Blood Donor">Blood Donor</option>
+            </select>
+
+            <label for="providerPhone">Phone Number</label>
+            <input type="text" id="providerPhone" name="providerPhone" placeholder="Phone Number">
+
+            <label for="providerLocation">Location</label>
+            <input type="text" id="providerLocation" name="providerLocation" placeholder="Location">
+
+            <button onclick="addProvider()">Add Provider</button>
+        </div>
+
+        <div class="box">
+            <h3>Provider List</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>City Ambulance</td>
+                    <td>Ambulance</td>
+                    <td>01700000000</td>
+                    <td>Dhaka</td>
+                    <td>
+                        <button onclick="editProvider()">Edit</button>
+                        <button onclick="deleteProvider()">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ABC Hospital</td>
+                    <td>Hospital</td>
+                    <td>01800000000</td>
+                    <td>Mirpur</td>
+                    <td>
+                        <button onclick="editProvider()"> Edit</button>
+                        <button onclick="deleteProvider()">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Emergency Help Hub |
+            Organization Management
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

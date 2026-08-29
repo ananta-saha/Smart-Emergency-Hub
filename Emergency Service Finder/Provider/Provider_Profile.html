@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Provider Profile</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html" class="active">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Provider Profile</h1>
+                    <p>View and update your service information.</p>
+                </div>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <form id="profileForm">
+
+                    <div class="profile-grid">
+
+                        <div class="form-group">
+
+                            <label>Provider Name</label>
+
+                            <input type="text" id="providerName" value="ABC Ambulance Service">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <input type="email" id="providerEmail" value="provider@gmail.com">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Phone</label>
+
+                            <input type="text" id="providerPhone" value="01700000000">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Service Type</label>
+
+                            <select id="providerServiceType">
+
+                                <option value="Ambulance" selected>
+                                    Ambulance
+                                </option>
+
+                                <option value="Hospital">
+                                    Hospital
+                                </option>
+
+                                <option value="Fire Service">
+                                    Fire Service
+                                </option>
+
+                                <option value="Police">
+                                    Police
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group profile-address">
+
+                        <label>Address</label>
+
+                        <textarea id="providerAddress" rows="4"
+                            placeholder="Enter provider address">Dhanmondi, Dhaka</textarea>
+
+                    </div>
+
+
+                    <p id="profileMessage"></p>
+
+
+                    <button type="submit" class="primary-btn">
+                        Update Profile
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Profile Summary</h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="summaryProviderName">
+                        ABC Ambulance Service
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="summaryProviderEmail">
+                        provider@gmail.com
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <span id="summaryProviderPhone">
+                        01700000000
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Service:</strong>
+                    <span id="summaryProviderService">
+                        Ambulance
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Address:</strong>
+                    <span id="summaryProviderAddress">
+                        Dhanmondi, Dhaka
+                    </span>
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

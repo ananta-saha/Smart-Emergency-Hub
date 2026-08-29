@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Emergency Services</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <h1>🚨 Emergency Help Hub</h1>
+
+        <div>
+            Organization
+            <button onclick="location.href='../index.html'">Logout</button>
+        </div>
+
+    </header>
+
+    <nav>
+        <a href="dashboard.html">🏠 Dashboard</a>
+        <a href="providers.html">👥 Providers</a>
+        <a href="requests.html">🚨 Requests</a>
+        <a href="funds.html">💰 Funds</a>
+        <a href="reviews.html">⭐ Reviews</a>
+        <a href="reports.html">📊 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+    </nav>
+
+    <main>
+        <h2>Emergency Services</h2>
+        <p>Manage services provided by your organization.</p>
+
+        <div class="box">
+            <h3>Add Service</h3>
+            <label for="serviceName">Service Name</label>
+            <input type="text" id="serviceName" name="serviceName" placeholder="Service Name">
+
+            <label for="serviceDescription">Service Description</label>
+            <input type="text" id="serviceDescription" name="serviceDescription" placeholder="Service Description">
+
+            <button onclick="addService()">Add Service</button>
+        </div>
+
+        <div class="service-card">
+            <h3>Emergency Ambulance</h3>
+            <p>24-hour ambulance support.</p>
+            <span>Active</span>
+            <button onclick="editService()">Edit</button>
+            <button onclick="deleteService()">Delete</button>
+        </div>
+        <div class="service-card">
+            <h3>Blood Donation</h3>
+            <p>Emergency blood donor support.</p>
+            <span>Active</span>
+            <button onclick="editService()">Edit</button>
+            <button onclick="deleteService()">Delete</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026 Emergency Help Hub |
+            Organization Management
+        </p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

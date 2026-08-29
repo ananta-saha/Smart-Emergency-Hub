@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Service Area</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html" class="active">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Service Area Management</h1>
+                    <p>Set your base area, service range, and covered locations.</p>
+                </div>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Area Information</h2>
+
+                <form id="areaForm">
+
+                    <div class="area-form-grid">
+
+                        <div class="form-group">
+
+                            <label>Base Area</label>
+
+                            <select id="baseArea">
+
+                                <option value="">
+                                    Select Base Area
+                                </option>
+
+                                <option value="Dhanmondi">
+                                    Dhanmondi
+                                </option>
+
+                                <option value="Mohammadpur">
+                                    Mohammadpur
+                                </option>
+
+                                <option value="Farmgate">
+                                    Farmgate
+                                </option>
+
+                                <option value="Mirpur">
+                                    Mirpur
+                                </option>
+
+                                <option value="Uttara">
+                                    Uttara
+                                </option>
+
+                                <option value="Gulshan">
+                                    Gulshan
+                                </option>
+
+                                <option value="Banani">
+                                    Banani
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Maximum Service Range (KM)</label>
+
+                            <input type="number" id="serviceRange" min="1" placeholder="Example: 10">
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="covered-title">
+                        Covered Areas
+                    </h3>
+
+
+                    <div class="covered-areas">
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Dhanmondi">
+                            Dhanmondi
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Kalabagan">
+                            Kalabagan
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Mohammadpur">
+                            Mohammadpur
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Farmgate">
+                            Farmgate
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Mirpur">
+                            Mirpur
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Uttara">
+                            Uttara
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Gulshan">
+                            Gulshan
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="coveredArea" value="Banani">
+                            Banani
+                        </label>
+
+                    </div>
+
+
+                    <p id="areaMessage"></p>
+
+
+                    <button type="submit" class="primary-btn">
+                        Save Service Area
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Current Service Area</h2>
+
+                <p>
+                    <strong>Base Area:</strong>
+                    <span id="summaryBaseArea">
+                        Not Set
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Service Range:</strong>
+                    <span id="summaryRange">
+                        Not Set
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Covered Areas:</strong>
+                    <span id="summaryCoveredAreas">
+                        Not Set
+                    </span>
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

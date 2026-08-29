@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Requests</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html" class="active">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Emergency Requests</h1>
+                    <p>View and manage incoming emergency service requests.</p>
+                </div>
+
+            </div>
+
+
+            <!-- Request Filter -->
+
+            <div class="section-box">
+
+                <div class="request-filter">
+
+                    <label for="requestFilter">
+                        Filter Requests:
+                    </label>
+
+                    <select id="requestFilter">
+
+                        <option value="All">
+                            All
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Accepted">
+                            Accepted
+                        </option>
+
+                        <option value="On The Way">
+                            On The Way
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                        <option value="Rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Requests Table -->
+
+            <div class="section-box">
+
+                <h2>Request List</h2>
+
+                <table id="requestTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Citizen</th>
+                            <th>Emergency</th>
+                            <th>Location</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr data-status="Pending">
+
+                            <td>#201</td>
+
+                            <td>Rahim Ahmed</td>
+
+                            <td>Road Accident</td>
+
+                            <td>Dhanmondi</td>
+
+                            <td>10:35 AM</td>
+
+                            <td>
+                                <span class="request-status status-pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td class="action-cell">
+
+                                <button class="accept-btn" onclick="acceptRequest(this)">
+                                    Accept
+                                </button>
+
+                                <button class="reject-btn" onclick="rejectRequest(this)">
+                                    Reject
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr data-status="Pending">
+
+                            <td>#202</td>
+
+                            <td>Karim Hasan</td>
+
+                            <td>Medical Emergency</td>
+
+                            <td>Kalabagan</td>
+
+                            <td>10:10 AM</td>
+
+                            <td>
+                                <span class="request-status status-pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td class="action-cell">
+
+                                <button class="accept-btn" onclick="acceptRequest(this)">
+                                    Accept
+                                </button>
+
+                                <button class="reject-btn" onclick="rejectRequest(this)">
+                                    Reject
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr data-status="Accepted">
+
+                            <td>#203</td>
+
+                            <td>Nusrat Jahan</td>
+
+                            <td>Heart Emergency</td>
+
+                            <td>Farmgate</td>
+
+                            <td>09:45 AM</td>
+
+                            <td>
+                                <span class="request-status status-accepted">
+                                    Accepted
+                                </span>
+                            </td>
+
+                            <td class="action-cell">
+
+                                <button class="way-btn" onclick="markOnTheWay(this)">
+                                    On The Way
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr data-status="Completed">
+
+                            <td>#204</td>
+
+                            <td>Tanvir Islam</td>
+
+                            <td>Medical Emergency</td>
+
+                            <td>Mohammadpur</td>
+
+                            <td>08:55 AM</td>
+
+                            <td>
+                                <span class="request-status status-completed">
+                                    Completed
+                                </span>
+                            </td>
+
+                            <td>
+                                No Action
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <p id="requestMessage"></p>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

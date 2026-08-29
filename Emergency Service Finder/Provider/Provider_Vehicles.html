@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vehicle Management</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <aside class="sidebar">
+
+            <h2>Emergency Service Finder</h2>
+
+            <a href="Provider_Dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="Provider_Availability.html">
+                Availability
+            </a>
+
+            <a href="Provider_Vehicles.html" class="active">
+                Vehicles
+            </a>
+
+            <a href="Provider_Area.html">
+                Service Area
+            </a>
+
+            <a href="Provider_Requests.html">
+                Emergency Requests
+            </a>
+
+            <a href="Provider_Profile.html">
+                Profile
+            </a>
+
+            <a href="Provider_login.html">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <div class="top-section">
+
+                <div>
+                    <h1>Vehicle Management</h1>
+                    <p>Add and manage your emergency service vehicles.</p>
+                </div>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Add Vehicle</h2>
+
+                <form id="vehicleForm">
+
+                    <div class="vehicle-form-grid">
+
+                        <div class="form-group">
+
+                            <label>Vehicle Type</label>
+
+                            <select id="vehicleType">
+
+                                <option value="">
+                                    Select Vehicle Type
+                                </option>
+
+                                <option value="Basic Ambulance">
+                                    Basic Ambulance
+                                </option>
+
+                                <option value="ICU Ambulance">
+                                    ICU Ambulance
+                                </option>
+
+                                <option value="Cardiac Ambulance">
+                                    Cardiac Ambulance
+                                </option>
+
+                                <option value="Freezer Ambulance">
+                                    Freezer Ambulance
+                                </option>
+
+                                <option value="Fire Engine">
+                                    Fire Engine
+                                </option>
+
+                                <option value="Rescue Vehicle">
+                                    Rescue Vehicle
+                                </option>
+
+                                <option value="Police Van">
+                                    Police Van
+                                </option>
+
+                                <option value="Patrol Car">
+                                    Patrol Car
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Total Vehicles</label>
+
+                            <input type="number" id="totalVehicles" min="1" placeholder="Example: 5">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Available Vehicles</label>
+
+                            <input type="number" id="availableVehicles" min="0" placeholder="Example: 3">
+
+                        </div>
+
+                    </div>
+
+
+                    <p id="vehicleMessage"></p>
+
+
+                    <button type="submit" class="primary-btn">
+                        Add Vehicle
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="section-box">
+
+                <h2>Vehicle List</h2>
+
+                <table id="vehicleTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Vehicle Type</th>
+                            <th>Total</th>
+                            <th>Available</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Basic Ambulance</td>
+                            <td>5</td>
+                            <td>3</td>
+
+                            <td>
+                                <button class="delete-btn" onclick="deleteVehicle(this)">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>ICU Ambulance</td>
+                            <td>2</td>
+                            <td>1</td>
+
+                            <td>
+                                <button class="delete-btn" onclick="deleteVehicle(this)">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

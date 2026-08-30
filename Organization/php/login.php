@@ -1,4 +1,6 @@
-<?php require_once "login_process.php"; ?>
+<?php
+ require_once "login_process.php"; 
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard - Smart Emergency Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<div class="sidebar">
+
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            🚨
+        </div>
+
+        <div>
+
+            <h2>Smart Emergency</h2>
+
+            <span>HUB</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="admin-info">
+
+        <div class="admin-avatar">
+            A
+        </div>
+
+        <div>
+
+            <strong>Admin User</strong>
+
+            <small>
+                System Administrator
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="nav-menu">
+
+
+        <button
+            class="active"
+            onclick="openPage('admin_dashboard.html')">
+
+            🏠 Dashboard
+
+        </button>
+
+
+        <button
+            onclick="openPage('organizations.html')">
+
+            🏢 Organizations
+
+        </button>
+
+
+        <button
+            onclick="openPage('service_providers.html')">
+
+            🚑 Service Providers
+
+        </button>
+
+
+        <button
+            onclick="openPage('notifications.html')">
+
+            🔔 Notifications
+
+        </button>
+
+
+        <button
+            onclick="openPage('fund_review.html')">
+
+            💰 Fund Review
+
+        </button>
+
+
+        <button
+            onclick="openPage('admin_profile.html')">
+
+            👤 My Profile
+
+        </button>
+
+
+    </div>
+
+
+    <button
+        class="logout-btn"
+        onclick="logoutAdmin()">
+
+        🚪 Logout
+
+    </button>
+
+
+</div>
+
+
+
+<div class="main-content">
+
+
+    <div class="top-bar">
+
+
+        <div>
+
+            <p class="welcome">
+                ADMIN CONTROL CENTER
+            </p>
+
+            <h1>
+                Dashboard
+            </h1>
+
+        </div>
+
+
+        <div class="date-box">
+
+            📅 30 August 2026
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="stats">
+
+
+        <div class="stat-card blue">
+
+            <div class="stat-icon">
+                🏢
+            </div>
+
+            <div>
+
+                <p>
+                    Total Organizations
+                </p>
+
+                <h2>
+                    25
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card green">
+
+            <div class="stat-icon">
+                🚑
+            </div>
+
+            <div>
+
+                <p>
+                    Service Providers
+                </p>
+
+                <h2>
+                    50
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card orange">
+
+            <div class="stat-icon">
+                🔔
+            </div>
+
+            <div>
+
+                <p>
+                    Notifications
+                </p>
+
+                <h2>
+                    15
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card purple">
+
+            <div class="stat-icon">
+                💰
+            </div>
+
+            <div>
+
+                <p>
+                    Pending Funds
+                </p>
+
+                <h2>
+                    10
+                </h2>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <h2 class="section-title">
+        Admin Management
+    </h2>
+
+
+
+    <div class="management-grid">
+
+
+        <div class="management-card organization-card">
+
+
+            <div class="card-icon">
+                🏢
+            </div>
+
+
+            <h2>
+                Organizations
+            </h2>
+
+
+            <p>
+                Manage registered organizations.
+                Admin can view, add, edit and delete
+                organizations from the system.
+            </p>
+
+
+            <button
+                onclick="openPage('organizations.html')">
+
+                Manage Organizations →
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="management-card provider-card">
+
+
+            <div class="card-icon">
+                🚑
+            </div>
+
+
+            <h2>
+                Service Providers
+            </h2>
+
+
+            <p>
+                Manage registered ambulance,
+                hospital, fire service, police
+                and blood donor providers.
+            </p>
+
+
+            <button
+                onclick="openPage('service_providers.html')">
+
+                Manage Providers →
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="management-card notification-card">
+
+
+            <div class="card-icon">
+                🔔
+            </div>
+
+
+            <h2>
+                Notifications
+            </h2>
+
+
+            <p>
+                Admin can send notifications to
+                organizations and service providers
+                and see all system notifications.
+            </p>
+
+
+            <button
+                onclick="openPage('notifications.html')">
+
+                Manage Notifications →
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="management-card fund-card">
+
+
+            <div class="card-icon">
+                💰
+            </div>
+
+
+            <h2>
+                Fund Review
+            </h2>
+
+
+            <p>
+                Organizations collect funds.
+                Admin can review fund requests
+                and approve or reject them.
+            </p>
+
+
+            <button
+                onclick="openPage('fund_review.html')">
+
+                Review Funds →
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

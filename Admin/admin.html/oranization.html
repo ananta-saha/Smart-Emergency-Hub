@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Organizations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🚨</div>
+
+            <div>
+                <h2>Smart Emergency</h2>
+                <span>HUB</span>
+            </div>
+        </div>
+
+        <div class="admin-info">
+            <div class="admin-avatar">A</div>
+
+            <div>
+                <strong>Admin User</strong>
+                <small>Administrator</small>
+            </div>
+        </div>
+
+        <div class="nav-menu">
+
+            <button onclick="openPage('admin_dashboard.html')">
+                🏠 Dashboard
+            </button>
+
+            <button class="active" onclick="openPage('organizations.html')">
+                🏢 Organizations
+            </button>
+
+            <button onclick="openPage('service_providers.html')">
+                🚑 Service Providers
+            </button>
+
+            <button onclick="openPage('notifications.html')">
+                🔔 Notifications
+            </button>
+
+            <button onclick="openPage('fund_review.html')">
+                💰 Fund Review
+            </button>
+
+            <button onclick="openPage('admin_profile.html')">
+                👤 My Profile
+            </button>
+
+        </div>
+
+        <button class="logout-btn" onclick="logoutAdmin()">
+            🚪 Logout
+        </button>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <div class="page-header">
+
+            <div>
+                <p class="welcome">Management</p>
+                <h1>Organizations</h1>
+            </div>
+
+            <button class="add-btn" onclick="openPage('add_organization.html')">
+                + Add Organization
+            </button>
+
+        </div>
+
+
+        <div class="table-card">
+
+            <table id="organizationTable">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Organization</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+
+                <tr>
+
+                    <td>01</td>
+
+                    <td>
+                        <strong>Hope Foundation</strong>
+                    </td>
+
+                    <td>
+                        hope@gmail.com
+                    </td>
+
+                    <td>
+                        01711111111
+                    </td>
+
+                    <td>
+                        Dhaka
+                    </td>
+
+                    <td>
+                        <span class="status active-status">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="edit-btn"
+                                onclick="editOrganization()">
+                            Edit
+                        </button>
+
+                        <button class="delete-btn"
+                                onclick="deleteOrganization(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>02</td>
+
+                    <td>
+                        <strong>Helping Hands</strong>
+                    </td>
+
+                    <td>
+                        help@gmail.com
+                    </td>
+
+                    <td>
+                        01822222222
+                    </td>
+
+                    <td>
+                        Mirpur
+                    </td>
+
+                    <td>
+                        <span class="status pending-status">
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="edit-btn"
+                                onclick="editOrganization()">
+                            Edit
+                        </button>
+
+                        <button class="delete-btn"
+                                onclick="deleteOrganization(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>03</td>
+
+                    <td>
+                        <strong>Care Bangladesh</strong>
+                    </td>
+
+                    <td>
+                        care@gmail.com
+                    </td>
+
+                    <td>
+                        01933333333
+                    </td>
+
+                    <td>
+                        Uttara
+                    </td>
+
+                    <td>
+                        <span class="status active-status">
+                            Active
+                        </span>
+                    </td>
+
+                    <td>
+
+                        <button class="edit-btn"
+                                onclick="editOrganization()">
+                            Edit
+                        </button>
+
+                        <button class="delete-btn"
+                                onclick="deleteOrganization(this)">
+                            Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

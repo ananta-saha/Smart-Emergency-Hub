@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Organization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-page">
+
+        <div class="form-card">
+
+            <div class="form-title">
+
+                <span>✏️</span>
+
+                <div>
+                    <h1>Edit Organization</h1>
+                    <p>Update organization information</p>
+                </div>
+
+            </div>
+
+
+            <form onsubmit="updateOrganization(event)">
+
+                <div class="content">
+
+                    <label>Organization Name</label>
+
+                    <input type="text"
+                           name="organization_name"
+                           value="Hope Foundation">
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Email Address</label>
+
+                    <input type="email"
+                           name="email"
+                           value="hope@gmail.com">
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Phone Number</label>
+
+                    <input type="tel"
+                           name="phone"
+                           value="01711111111">
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Address</label>
+
+                    <input type="text"
+                           name="address"
+                           value="Dhaka">
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Status</label>
+
+                    <select name="status">
+
+                        <option>
+                            Active
+                        </option>
+
+                        <option>
+                            Pending
+                        </option>
+
+                        <option>
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button type="submit"
+                            class="main-btn">
+                        Update Organization
+                    </button>
+
+                    <button type="button"
+                            class="cancel-btn"
+                            onclick="openPage('organizations.html')">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

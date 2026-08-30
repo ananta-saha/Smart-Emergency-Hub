@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Notification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-page">
+
+        <div class="form-card">
+
+            <div class="form-title">
+
+                <span>🔔</span>
+
+                <div>
+                    <h1>Send Notification</h1>
+                    <p>Send an important message</p>
+                </div>
+
+            </div>
+
+
+            <form onsubmit="sendNotification(event)">
+
+                <div class="content">
+
+                    <label>Receiver</label>
+
+                    <select name="receiver">
+
+                        <option>All</option>
+                        <option>Organization</option>
+                        <option>Service Provider</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Subject</label>
+
+                    <input type="text"
+                           name="subject"
+                           placeholder="Enter notification subject">
+
+                </div>
+
+
+                <div class="content">
+
+                    <label>Message</label>
+
+                    <textarea name="message"
+                              placeholder="Write your message"></textarea>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button type="submit"
+                            class="main-btn">
+                        Send Notification
+                    </button>
+
+                    <button type="button"
+                            class="cancel-btn"
+                            onclick="openPage('notifications.html')">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

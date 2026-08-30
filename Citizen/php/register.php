@@ -15,7 +15,7 @@
     <header class="navbar">
         <h2>🚑 Emergency Finder</h2>
         <nav>
-            <a href="../index.html">Home</a>
+            <a href="../index.php">Home</a>
             <a href="login.php">Login</a>
         </nav>
     </header>

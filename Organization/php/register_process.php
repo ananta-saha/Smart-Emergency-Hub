@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $conn,
                     "INSERT INTO notifications
                     (admin_id, title, message, target_type, status)
-                    VALUES (NULL, ?, ?, 'Organization', 'Active')"
+                    VALUES (NULL, ?, ?, 'Organizations', 'Active')"
                 );
 
                 if ($notificationStmt) {

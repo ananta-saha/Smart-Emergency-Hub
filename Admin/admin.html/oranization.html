@@ -1,233 +1,172 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Organizations</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="dashboard-page">
 
-        <div class="brand">
-            <div class="brand-icon">🚨</div>
+<div class="content-container">
 
-            <div>
-                <h2>Smart Emergency</h2>
-                <span>HUB</span>
-            </div>
-        </div>
 
-        <div class="admin-info">
-            <div class="admin-avatar">A</div>
+    <div class="page-header">
 
-            <div>
-                <strong>Admin User</strong>
-                <small>Administrator</small>
-            </div>
-        </div>
+        <div>
 
-        <div class="nav-menu">
+            <h1>
+                Organizations
+            </h1>
 
-            <button onclick="openPage('admin_dashboard.html')">
-                🏠 Dashboard
-            </button>
-
-            <button class="active" onclick="openPage('organizations.html')">
-                🏢 Organizations
-            </button>
-
-            <button onclick="openPage('service_providers.html')">
-                🚑 Service Providers
-            </button>
-
-            <button onclick="openPage('notifications.html')">
-                🔔 Notifications
-            </button>
-
-            <button onclick="openPage('fund_review.html')">
-                💰 Fund Review
-            </button>
-
-            <button onclick="openPage('admin_profile.html')">
-                👤 My Profile
-            </button>
+            <p>
+                Manage registered organizations
+            </p>
 
         </div>
 
-        <button class="logout-btn" onclick="logoutAdmin()">
-            🚪 Logout
+
+        <button
+            class="add-btn"
+            onclick="goTo('add_organization.html')">
+
+            + Add Organization
+
         </button>
 
     </div>
 
 
-    <div class="main-content">
+    <div class="table-box">
 
-        <div class="page-header">
+        <table>
 
-            <div>
-                <p class="welcome">Management</p>
-                <h1>Organizations</h1>
-            </div>
+            <tr>
 
-            <button class="add-btn" onclick="openPage('add_organization.html')">
-                + Add Organization
-            </button>
+                <th>ID</th>
+                <th>Organization</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
 
-        </div>
-
-
-        <div class="table-card">
-
-            <table id="organizationTable">
-
-                <tr>
-                    <th>ID</th>
-                    <th>Organization</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
+            </tr>
 
 
-                <tr>
+            <tr>
 
-                    <td>01</td>
+                <td>01</td>
 
-                    <td>
-                        <strong>Hope Foundation</strong>
-                    </td>
+                <td>
+                    Hope Foundation
+                </td>
 
-                    <td>
-                        hope@gmail.com
-                    </td>
+                <td>
+                    hope@gmail.com
+                </td>
 
-                    <td>
-                        01711111111
-                    </td>
+                <td>
+                    01711111111
+                </td>
 
-                    <td>
-                        Dhaka
-                    </td>
+                <td>
+                    Dhaka
+                </td>
 
-                    <td>
-                        <span class="status active-status">
-                            Active
-                        </span>
-                    </td>
+                <td>
+                    <span class="status active">
+                        Active
+                    </span>
+                </td>
 
-                    <td>
+                <td>
 
-                        <button class="edit-btn"
-                                onclick="editOrganization()">
-                            Edit
-                        </button>
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_organization.html')">
 
-                        <button class="delete-btn"
-                                onclick="deleteOrganization(this)">
-                            Delete
-                        </button>
+                        Edit
 
-                    </td>
+                    </button>
 
-                </tr>
+                    <button
+                        class="delete-btn"
+                        onclick="deleteOrganization(1)">
 
+                        Delete
 
-                <tr>
+                    </button>
 
-                    <td>02</td>
+                </td>
 
-                    <td>
-                        <strong>Helping Hands</strong>
-                    </td>
-
-                    <td>
-                        help@gmail.com
-                    </td>
-
-                    <td>
-                        01822222222
-                    </td>
-
-                    <td>
-                        Mirpur
-                    </td>
-
-                    <td>
-                        <span class="status pending-status">
-                            Pending
-                        </span>
-                    </td>
-
-                    <td>
-
-                        <button class="edit-btn"
-                                onclick="editOrganization()">
-                            Edit
-                        </button>
-
-                        <button class="delete-btn"
-                                onclick="deleteOrganization(this)">
-                            Delete
-                        </button>
-
-                    </td>
-
-                </tr>
+            </tr>
 
 
-                <tr>
+            <tr>
 
-                    <td>03</td>
+                <td>02</td>
 
-                    <td>
-                        <strong>Care Bangladesh</strong>
-                    </td>
+                <td>
+                    Helping Hands
+                </td>
 
-                    <td>
-                        care@gmail.com
-                    </td>
+                <td>
+                    help@gmail.com
+                </td>
 
-                    <td>
-                        01933333333
-                    </td>
+                <td>
+                    01822222222
+                </td>
 
-                    <td>
-                        Uttara
-                    </td>
+                <td>
+                    Mirpur
+                </td>
 
-                    <td>
-                        <span class="status active-status">
-                            Active
-                        </span>
-                    </td>
+                <td>
+                    <span class="status pending">
+                        Pending
+                    </span>
+                </td>
 
-                    <td>
+                <td>
 
-                        <button class="edit-btn"
-                                onclick="editOrganization()">
-                            Edit
-                        </button>
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_organization.html')">
 
-                        <button class="delete-btn"
-                                onclick="deleteOrganization(this)">
-                            Delete
-                        </button>
+                        Edit
 
-                    </td>
+                    </button>
 
-                </tr>
+                    <button
+                        class="delete-btn"
+                        onclick="deleteOrganization(2)">
 
-            </table>
+                        Delete
 
-        </div>
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

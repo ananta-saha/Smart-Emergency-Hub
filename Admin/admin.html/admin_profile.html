@@ -1,192 +1,112 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Admin Profile</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="page">
 
-        <div class="brand">
+<div class="form-box">
 
-            <div class="brand-icon">
-                🚨
-            </div>
+    <h1>
+        Admin Profile
+    </h1>
 
-            <div>
-                <h2>Smart Emergency</h2>
-                <span>HUB</span>
-            </div>
-
-        </div>
+    <p class="subtitle">
+        View and update administrator information
+    </p>
 
 
-        <div class="admin-info">
+    <div class="form-group">
 
-            <div class="admin-avatar">
-                A
-            </div>
+        <label>
+            Full Name
+        </label>
 
-            <div>
-                <strong>Admin User</strong>
-                <small>Administrator</small>
-            </div>
+        <input
+            type="text"
+            value="Admin User">
 
-        </div>
+    </div>
 
 
-        <div class="nav-menu">
+    <div class="form-row">
 
-            <button onclick="openPage('admin_dashboard.html')">
-                🏠 Dashboard
-            </button>
+        <div class="form-group">
 
-            <button onclick="openPage('organizations.html')">
-                🏢 Organizations
-            </button>
+            <label>
+                Email
+            </label>
 
-            <button onclick="openPage('service_providers.html')">
-                🚑 Service Providers
-            </button>
-
-            <button onclick="openPage('notifications.html')">
-                🔔 Notifications
-            </button>
-
-            <button onclick="openPage('fund_review.html')">
-                💰 Fund Review
-            </button>
-
-            <button class="active"
-                    onclick="openPage('admin_profile.html')">
-                👤 My Profile
-            </button>
+            <input
+                type="email"
+                value="admin@gmail.com">
 
         </div>
 
 
-        <button class="logout-btn"
-                onclick="logoutAdmin()">
-            🚪 Logout
+        <div class="form-group">
+
+            <label>
+                Phone Number
+            </label>
+
+            <input
+                type="text"
+                value="01711111111">
+
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            Role
+        </label>
+
+        <input
+            type="text"
+            value="Administrator"
+            readonly>
+
+    </div>
+
+
+    <div class="action-buttons">
+
+        <button
+            class="main-btn orange-btn"
+            onclick="showMessage('Profile updated successfully')">
+
+            Update Profile
+
+        </button>
+
+        <button
+            class="back-btn"
+            onclick="goTo('admin_dashboard.html')">
+
+            Back
+
         </button>
 
     </div>
 
+</div>
 
-    <div class="main-content">
+</div>
 
-        <div class="page-header">
-
-            <div>
-
-                <p class="welcome">
-                    Account
-                </p>
-
-                <h1>
-                    Admin Profile
-                </h1>
-
-            </div>
-
-        </div>
-
-
-        <div class="profile-card">
-
-            <div class="profile-top">
-
-                <div class="big-avatar">
-                    A
-                </div>
-
-                <div>
-
-                    <h2>
-                        Admin User
-                    </h2>
-
-                    <p>
-                        System Administrator
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <form onsubmit="updateProfile(event)">
-
-                <div class="profile-form">
-
-                    <div class="content">
-
-                        <label>
-                            Full Name
-                        </label>
-
-                        <input type="text"
-                               name="name"
-                               value="Admin User">
-
-                    </div>
-
-
-                    <div class="content">
-
-                        <label>
-                            Email Address
-                        </label>
-
-                        <input type="email"
-                               name="email"
-                               value="admin@gmail.com">
-
-                    </div>
-
-
-                    <div class="content">
-
-                        <label>
-                            Phone Number
-                        </label>
-
-                        <input type="tel"
-                               name="phone"
-                               value="01711111111">
-
-                    </div>
-
-
-                    <div class="content">
-
-                        <label>
-                            Role
-                        </label>
-
-                        <input type="text"
-                               value="Administrator"
-                               readonly>
-
-                    </div>
-
-                </div>
-
-
-                <button type="submit"
-                        class="main-btn">
-                    Update Profile
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
+
 </html>

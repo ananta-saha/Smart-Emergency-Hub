@@ -1,193 +1,106 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Notifications</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="list-page">
 
-        <div class="brand">
-
-            <div class="brand-icon">
-                🚨
-            </div>
-
-            <div>
-                <h2>Smart Emergency</h2>
-                <span>HUB</span>
-            </div>
-
-        </div>
+<div class="list-container">
 
 
-        <div class="admin-info">
+    <div class="list-header">
 
-            <div class="admin-avatar">
-                A
-            </div>
+        <div>
 
-            <div>
-                <strong>Admin User</strong>
-                <small>Administrator</small>
-            </div>
+            <h1>
+                Notification Management
+            </h1>
+
+            <p>
+                Send and view all system notifications
+            </p>
 
         </div>
 
+        <button
+            class="add-btn purple-btn"
+            onclick="goTo('send_notification.html')">
 
-        <div class="nav-menu">
+            + Send Notification
 
-            <button onclick="openPage('admin_dashboard.html')">
-                🏠 Dashboard
-            </button>
-
-            <button onclick="openPage('organizations.html')">
-                🏢 Organizations
-            </button>
-
-            <button onclick="openPage('service_providers.html')">
-                🚑 Service Providers
-            </button>
-
-            <button class="active"
-                    onclick="openPage('notifications.html')">
-                🔔 Notifications
-            </button>
-
-            <button onclick="openPage('fund_review.html')">
-                💰 Fund Review
-            </button>
-
-            <button onclick="openPage('admin_profile.html')">
-                👤 My Profile
-            </button>
-
-        </div>
-
-
-        <button class="logout-btn"
-                onclick="logoutAdmin()">
-            🚪 Logout
         </button>
 
     </div>
 
 
-    <div class="main-content">
+    <div class="notification-item">
 
-        <div class="page-header">
+        <h3>
+            New Organization Registration
+        </h3>
 
-            <div>
+        <p>
+            Hope Foundation has submitted a new
+            registration request.
+        </p>
 
-                <p class="welcome">
-                    Communication
-                </p>
-
-                <h1>
-                    Notifications
-                </h1>
-
-            </div>
-
-
-            <button class="add-btn"
-                    onclick="openPage('send_notification.html')">
-
-                + Send Notification
-
-            </button>
-
-        </div>
-
-
-        <div class="notification-list">
-
-
-            <div class="notification-card">
-
-                <div class="notification-icon blue-icon">
-                    🏢
-                </div>
-
-                <div>
-
-                    <h3>
-                        New Organization Registration
-                    </h3>
-
-                    <p>
-                        Hope Foundation has submitted
-                        a registration request.
-                    </p>
-
-                    <small>
-                        Today • 10:30 AM
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="notification-card">
-
-                <div class="notification-icon green-icon">
-                    🚑
-                </div>
-
-                <div>
-
-                    <h3>
-                        New Service Provider
-                    </h3>
-
-                    <p>
-                        A new ambulance service provider
-                        has registered.
-                    </p>
-
-                    <small>
-                        Today • 11:00 AM
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="notification-card">
-
-                <div class="notification-icon orange-icon">
-                    💰
-                </div>
-
-                <div>
-
-                    <h3>
-                        Fund Request
-                    </h3>
-
-                    <p>
-                        Helping Hands submitted
-                        a new fund request.
-                    </p>
-
-                    <small>
-                        Today • 12:30 PM
-                    </small>
-
-                </div>
-
-            </div>
-
-
-        </div>
+        <small>
+            31 August 2026
+        </small>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <div class="notification-item">
+
+        <h3>
+            New Service Provider
+        </h3>
+
+        <p>
+            A new ambulance service provider has
+            registered in Dhaka.
+        </p>
+
+        <small>
+            30 August 2026
+        </small>
+
+    </div>
+
+
+    <div class="notification-item">
+
+        <h3>
+            New Fund Request
+        </h3>
+
+        <p>
+            Helping Hands has submitted a new fund
+            request for emergency support.
+        </p>
+
+        <small>
+            29 August 2026
+        </small>
+
+    </div>
+
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Admin Login - Smart Emergency Hub</title>
+
+    <title>Admin Login</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="login-page">
+<body>
 
-    <div class="login-card">
+<div class="page">
 
-        <div class="logo-circle">🚨</div>
+    <div class="login-box">
 
-        <h1>Smart Emergency Hub</h1>
-        <p class="subtitle">Admin Login</p>
+        <div class="logo">
+            🚨
+        </div>
 
-        <form onsubmit="loginAdmin(event)">
+        <h1>Admin Login</h1>
 
-            <div class="content">
-                <label>Email Address</label>
-                <input type="email" id="loginEmail" name="email" placeholder="admin@example.com">
-            </div>
+        <p class="subtitle">
+            Smart Emergency Hub
+        </p>
 
-            <div class="content">
-                <label>Password</label>
-                <input type="password" id="loginPassword" name="password" placeholder="Enter password">
-            </div>
 
-            <button type="submit" class="main-btn">Login</button>
+        <div class="form-group">
 
-        </form>
+            <label>Email Address</label>
 
-        <p class="bottom-text">
+            <input
+                type="email"
+                placeholder="admin@example.com">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                placeholder="Enter password">
+
+        </div>
+
+
+        <button
+            class="submit-btn"
+            onclick="goTo('admin_dashboard.html')">
+
+            Login
+
+        </button>
+
+
+        <p class="link-text">
+
             Don't have an account?
-            <a href="admin_registration.html">Register</a>
+
+            <a href="admin_registration.html">
+                Register
+            </a>
+
         </p>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,252 +1,167 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Fund Review</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="list-page">
 
-        <div class="brand">
+<div class="list-container">
 
-            <div class="brand-icon">
-                🚨
-            </div>
 
-            <div>
-                <h2>Smart Emergency</h2>
-                <span>HUB</span>
-            </div>
+    <div class="list-header">
 
-        </div>
+        <div>
 
+            <h1>
+                Fund Review
+            </h1>
 
-        <div class="admin-info">
-
-            <div class="admin-avatar">
-                A
-            </div>
-
-            <div>
-                <strong>Admin User</strong>
-                <small>Administrator</small>
-            </div>
-
-        </div>
-
-
-        <div class="nav-menu">
-
-            <button onclick="openPage('admin_dashboard.html')">
-                🏠 Dashboard
-            </button>
-
-            <button onclick="openPage('organizations.html')">
-                🏢 Organizations
-            </button>
-
-            <button onclick="openPage('service_providers.html')">
-                🚑 Service Providers
-            </button>
-
-            <button onclick="openPage('notifications.html')">
-                🔔 Notifications
-            </button>
-
-            <button class="active"
-                    onclick="openPage('fund_review.html')">
-                💰 Fund Review
-            </button>
-
-            <button onclick="openPage('admin_profile.html')">
-                👤 My Profile
-            </button>
-
-        </div>
-
-
-        <button class="logout-btn"
-                onclick="logoutAdmin()">
-            🚪 Logout
-        </button>
-
-    </div>
-
-
-    <div class="main-content">
-
-        <div class="page-header">
-
-            <div>
-
-                <p class="welcome">
-                    Finance Management
-                </p>
-
-                <h1>
-                    Fund Review
-                </h1>
-
-            </div>
-
-
-            <div class="fund-total">
-                💰 Pending Requests:
-                <strong>10</strong>
-            </div>
-
-        </div>
-
-
-        <div class="table-card">
-
-            <table>
-
-                <tr>
-
-                    <th>ID</th>
-                    <th>Organization</th>
-                    <th>Amount</th>
-                    <th>Purpose</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>01</td>
-
-                    <td>
-                        <strong>Hope Foundation</strong>
-                    </td>
-
-                    <td>
-                        ৳50,000
-                    </td>
-
-                    <td>
-                        Emergency Support
-                    </td>
-
-                    <td>
-                        30-08-2026
-                    </td>
-
-                    <td>
-                        <span class="status pending-status">
-                            Pending
-                        </span>
-                    </td>
-
-                    <td>
-
-                        <button class="approve-btn"
-                                onclick="approveFund(this)">
-                            Approve
-                        </button>
-
-                        <button class="delete-btn"
-                                onclick="rejectFund(this)">
-                            Reject
-                        </button>
-
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>02</td>
-
-                    <td>
-                        <strong>Helping Hands</strong>
-                    </td>
-
-                    <td>
-                        ৳30,000
-                    </td>
-
-                    <td>
-                        Medical Support
-                    </td>
-
-                    <td>
-                        29-08-2026
-                    </td>
-
-                    <td>
-                        <span class="status pending-status">
-                            Pending
-                        </span>
-                    </td>
-
-                    <td>
-
-                        <button class="approve-btn"
-                                onclick="approveFund(this)">
-                            Approve
-                        </button>
-
-                        <button class="delete-btn"
-                                onclick="rejectFund(this)">
-                            Reject
-                        </button>
-
-                    </td>
-
-                </tr>
-
-
-                <tr>
-
-                    <td>03</td>
-
-                    <td>
-                        <strong>Care Bangladesh</strong>
-                    </td>
-
-                    <td>
-                        ৳75,000
-                    </td>
-
-                    <td>
-                        Disaster Relief
-                    </td>
-
-                    <td>
-                        28-08-2026
-                    </td>
-
-                    <td>
-                        <span class="status active-status">
-                            Approved
-                        </span>
-                    </td>
-
-                    <td>
-
-                        <button class="view-btn"
-                                onclick="viewFund()">
-                            View
-                        </button>
-
-                    </td>
-
-                </tr>
-
-            </table>
+            <p>
+                Review organization fund requests
+            </p>
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <div class="table-box">
+
+        <table class="orange-table">
+
+            <tr>
+
+                <th>ID</th>
+                <th>Organization</th>
+                <th>Amount</th>
+                <th>Purpose</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>01</td>
+
+                <td>
+                    Hope Foundation
+                </td>
+
+                <td>
+                    ৳50,000
+                </td>
+
+                <td>
+                    Emergency Support
+                </td>
+
+                <td>
+                    31 Aug 2026
+                </td>
+
+                <td>
+
+                    <span class="status pending">
+                        Pending
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="approve-btn"
+                        onclick="approveFund(1)">
+
+                        Approve
+
+                    </button>
+
+                    <button
+                        class="reject-btn"
+                        onclick="rejectFund(1)">
+
+                        Reject
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>02</td>
+
+                <td>
+                    Helping Hands
+                </td>
+
+                <td>
+                    ৳30,000
+                </td>
+
+                <td>
+                    Medical Support
+                </td>
+
+                <td>
+                    30 Aug 2026
+                </td>
+
+                <td>
+
+                    <span class="status pending">
+                        Pending
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="approve-btn"
+                        onclick="approveFund(2)">
+
+                        Approve
+
+                    </button>
+
+                    <button
+                        class="reject-btn"
+                        onclick="rejectFund(2)">
+
+                        Reject
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

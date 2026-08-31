@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Admin Registration</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="login-page">
+<body>
 
-    <div class="login-card">
+<div class="page">
 
-        <div class="logo-circle">🚨</div>
+    <div class="form-box">
 
-        <h1>Create Admin Account</h1>
-        <p class="subtitle">Smart Emergency Hub</p>
+        <h1>Registration Form</h1>
 
-        <form onsubmit="registerAdmin(event)">
+        <p class="subtitle">
+            Fill out the form carefully for registration
+        </p>
 
-            <div class="content">
-                <label>Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter full name">
+
+        <div class="form-group">
+
+            <label>Admin Name</label>
+
+            <input
+                type="text"
+                placeholder="Enter full name">
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="admin@example.com">
+
             </div>
 
-            <div class="content">
-                <label>Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter email">
-            </div>
 
-            <div class="content">
+            <div class="form-group">
+
                 <label>Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
+
+                <input
+                    type="text"
+                    placeholder="017XXXXXXXX">
+
             </div>
 
-            <div class="content">
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
                 <label>Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password">
+
+                <input
+                    type="password"
+                    placeholder="Enter password">
+
             </div>
 
-            <div class="content">
+
+            <div class="form-group">
+
                 <label>Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
+
+                <input
+                    type="password"
+                    placeholder="Confirm password">
+
             </div>
 
-            <button type="submit" class="main-btn">
-                Create Account
-            </button>
+        </div>
 
-        </form>
 
-        <p class="bottom-text">
+        <button
+            class="main-btn green-btn"
+            onclick="goTo('admin_login.html')">
+
+            Register
+
+        </button>
+
+
+        <p class="link-text">
+
             Already have an account?
-            <a href="admin_login.html">Login</a>
+
+            <a href="admin_login.html">
+                Login
+            </a>
+
         </p>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

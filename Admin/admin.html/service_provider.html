@@ -1,270 +1,155 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Service Providers</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="sidebar">
+<div class="list-page">
 
-        <div class="brand">
-
-            <div class="brand-icon">
-                🚨
-            </div>
-
-            <div>
-                <h2>Smart Emergency</h2>
-                <span>HUB</span>
-            </div>
-
-        </div>
+<div class="list-container">
 
 
-        <div class="admin-info">
+    <div class="list-header">
 
-            <div class="admin-avatar">
-                A
-            </div>
+        <div>
 
-            <div>
-                <strong>Admin User</strong>
-                <small>Administrator</small>
-            </div>
+            <h1>
+                Service Provider Management
+            </h1>
+
+            <p>
+                Manage all registered service providers
+            </p>
 
         </div>
 
+        <button
+            class="add-btn green-btn"
+            onclick="goTo('add_service_provider.html')">
 
-        <div class="nav-menu">
+            + Add Provider
 
-            <button onclick="openPage('admin_dashboard.html')">
-                🏠 Dashboard
-            </button>
-
-            <button onclick="openPage('organizations.html')">
-                🏢 Organizations
-            </button>
-
-            <button class="active"
-                    onclick="openPage('service_providers.html')">
-                🚑 Service Providers
-            </button>
-
-            <button onclick="openPage('notifications.html')">
-                🔔 Notifications
-            </button>
-
-            <button onclick="openPage('fund_review.html')">
-                💰 Fund Review
-            </button>
-
-            <button onclick="openPage('admin_profile.html')">
-                👤 My Profile
-            </button>
-
-        </div>
-
-
-        <button class="logout-btn"
-                onclick="logoutAdmin()">
-            🚪 Logout
         </button>
 
     </div>
 
 
-    <div class="main-content">
+    <div class="table-box">
 
-        <div class="page-header">
+        <table class="green-table">
 
-            <div>
-                <p class="welcome">
-                    Management
-                </p>
+            <tr>
 
-                <h1>
-                    Service Providers
-                </h1>
-            </div>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Action</th>
 
-
-            <button class="add-btn"
-                    onclick="openPage('add_service_provider.html')">
-
-                + Add Provider
-
-            </button>
-
-        </div>
+            </tr>
 
 
-        <div class="table-card">
+            <tr>
 
-            <table>
+                <td>01</td>
 
-                <tr>
+                <td>Rahim Ahmed</td>
 
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Service</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Location</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                <td>Ambulance</td>
 
-                </tr>
+                <td>rahim@gmail.com</td>
 
+                <td>01711111111</td>
 
-                <tr>
+                <td>
+                    <span class="status active">
+                        Active
+                    </span>
+                </td>
 
-                    <td>01</td>
+                <td>
 
-                    <td>
-                        <strong>Rahim Ahmed</strong>
-                    </td>
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_service_provider.html')">
 
-                    <td>
-                        🚑 Ambulance
-                    </td>
+                        Edit
 
-                    <td>
-                        rahim@gmail.com
-                    </td>
+                    </button>
 
-                    <td>
-                        01711111111
-                    </td>
+                    <button
+                        class="delete-btn"
+                        onclick="deleteProvider(1)">
 
-                    <td>
-                        Dhaka
-                    </td>
+                        Delete
 
-                    <td>
-                        <span class="status active-status">
-                            Active
-                        </span>
-                    </td>
+                    </button>
 
-                    <td>
+                </td>
 
-                        <button class="edit-btn"
-                                onclick="editProvider()">
-                            Edit
-                        </button>
-
-                        <button class="delete-btn"
-                                onclick="deleteProvider(this)">
-                            Delete
-                        </button>
-
-                    </td>
-
-                </tr>
+            </tr>
 
 
-                <tr>
+            <tr>
 
-                    <td>02</td>
+                <td>02</td>
 
-                    <td>
-                        <strong>Karim Hasan</strong>
-                    </td>
+                <td>Karim Hasan</td>
 
-                    <td>
-                        🔥 Fire Service
-                    </td>
+                <td>Fire Service</td>
 
-                    <td>
-                        karim@gmail.com
-                    </td>
+                <td>karim@gmail.com</td>
 
-                    <td>
-                        01822222222
-                    </td>
+                <td>01822222222</td>
 
-                    <td>
-                        Mirpur
-                    </td>
+                <td>
+                    <span class="status pending">
+                        Pending
+                    </span>
+                </td>
 
-                    <td>
-                        <span class="status pending-status">
-                            Pending
-                        </span>
-                    </td>
+                <td>
 
-                    <td>
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_service_provider.html')">
 
-                        <button class="edit-btn"
-                                onclick="editProvider()">
-                            Edit
-                        </button>
+                        Edit
 
-                        <button class="delete-btn"
-                                onclick="deleteProvider(this)">
-                            Delete
-                        </button>
+                    </button>
 
-                    </td>
+                    <button
+                        class="delete-btn"
+                        onclick="deleteProvider(2)">
 
-                </tr>
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
 
 
-                <tr>
-
-                    <td>03</td>
-
-                    <td>
-                        <strong>Sumaiya Akter</strong>
-                    </td>
-
-                    <td>
-                        🩸 Blood Donor
-                    </td>
-
-                    <td>
-                        sumaiya@gmail.com
-                    </td>
-
-                    <td>
-                        01933333333
-                    </td>
-
-                    <td>
-                        Uttara
-                    </td>
-
-                    <td>
-                        <span class="status active-status">
-                            Active
-                        </span>
-                    </td>
-
-                    <td>
-
-                        <button class="edit-btn"
-                                onclick="editProvider()">
-                            Edit
-                        </button>
-
-                        <button class="delete-btn"
-                                onclick="deleteProvider(this)">
-                            Delete
-                        </button>
-
-                    </td>
-
-                </tr>
-
-            </table>
-
-        </div>
+        </table>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

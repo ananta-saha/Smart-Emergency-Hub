@@ -1,128 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Add Service Provider</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="form-page">
+<div class="page provider-page">
 
-        <div class="form-card">
+    <div class="form-box">
 
-            <div class="form-title">
+        <h1>Add Service Provider</h1>
 
-                <span>🚑</span>
+        <p class="subtitle">
+            Register a new emergency service provider
+        </p>
 
-                <div>
-                    <h1>Add Service Provider</h1>
-                    <p>Register a new service provider</p>
-                </div>
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    placeholder="Enter full name">
 
             </div>
 
 
-            <form onsubmit="addProvider(event)">
+            <div class="form-group">
 
-                <div class="content">
+                <label>Phone Number</label>
 
-                    <label>Full Name</label>
+                <input
+                    type="text"
+                    placeholder="017XXXXXXXX">
 
-                    <input type="text"
-                           name="name"
-                           placeholder="Enter full name">
+            </div>
 
-                </div>
-
-
-                <div class="content">
-
-                    <label>Email Address</label>
-
-                    <input type="email"
-                           name="email"
-                           placeholder="Enter email">
-
-                </div>
+        </div>
 
 
-                <div class="content">
+        <div class="form-row">
 
-                    <label>Phone Number</label>
+            <div class="form-group">
 
-                    <input type="tel"
-                           name="phone"
-                           placeholder="Enter phone number">
+                <label>Email Address</label>
 
-                </div>
+                <input
+                    type="email"
+                    placeholder="provider@gmail.com">
 
-
-                <div class="content">
-
-                    <label>Service Type</label>
-
-                    <select name="service_type">
-
-                        <option>Ambulance</option>
-                        <option>Hospital</option>
-                        <option>Fire Service</option>
-                        <option>Police</option>
-                        <option>Blood Donor</option>
-
-                    </select>
-
-                </div>
+            </div>
 
 
-                <div class="content">
+            <div class="form-group">
 
-                    <label>Location</label>
+                <label>Service Type</label>
 
-                    <input type="text"
-                           name="location"
-                           placeholder="Enter location">
+                <select>
 
-                </div>
+                    <option value="">Select service</option>
+                    <option>Ambulance</option>
+                    <option>Hospital</option>
+                    <option>Fire Service</option>
+                    <option>Police</option>
+                    <option>Blood Donor</option>
 
+                </select>
 
-                <div class="content">
+            </div>
 
-                    <label>Status</label>
-
-                    <select name="status">
-
-                        <option>Active</option>
-                        <option>Pending</option>
-                        <option>Inactive</option>
-
-                    </select>
-
-                </div>
+        </div>
 
 
-                <div class="form-buttons">
+        <div class="form-group">
 
-                    <button type="submit"
-                            class="main-btn">
-                        Add Provider
-                    </button>
+            <label>Location</label>
 
-                    <button type="button"
-                            class="cancel-btn"
-                            onclick="openPage('service_providers.html')">
-                        Cancel
-                    </button>
+            <input
+                type="text"
+                placeholder="Enter service provider location">
 
-                </div>
+        </div>
 
-            </form>
+
+        <div class="form-group">
+
+            <label>Status</label>
+
+            <select>
+
+                <option>Active</option>
+                <option>Pending</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <button
+                class="main-btn green-btn"
+                onclick="showMessage('Service provider added successfully')">
+
+                Add Provider
+
+            </button>
+
+
+            <button
+                class="back-btn"
+                onclick="goTo('service_providers.html')">
+
+                Cancel
+
+            </button>
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,119 +1,134 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Edit Organization</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <div class="form-page">
+<div class="page organization-page">
 
-        <div class="form-card">
+    <div class="form-box">
 
-            <div class="form-title">
+        <h1>Edit Organization</h1>
 
-                <span>✏️</span>
+        <p class="subtitle">
+            Update organization information
+        </p>
 
-                <div>
-                    <h1>Edit Organization</h1>
-                    <p>Update organization information</p>
-                </div>
+
+        <div class="form-group">
+
+            <label>Organization Name</label>
+
+            <input
+                type="text"
+                value="Hope Foundation">
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    value="hope@gmail.com">
 
             </div>
 
 
-            <form onsubmit="updateOrganization(event)">
+            <div class="form-group">
 
-                <div class="content">
+                <label>Phone Number</label>
 
-                    <label>Organization Name</label>
+                <input
+                    type="text"
+                    value="01711111111">
 
-                    <input type="text"
-                           name="organization_name"
-                           value="Hope Foundation">
+            </div>
 
-                </div>
-
-
-                <div class="content">
-
-                    <label>Email Address</label>
-
-                    <input type="email"
-                           name="email"
-                           value="hope@gmail.com">
-
-                </div>
+        </div>
 
 
-                <div class="content">
+        <div class="form-group">
 
-                    <label>Phone Number</label>
+            <label>Address</label>
 
-                    <input type="tel"
-                           name="phone"
-                           value="01711111111">
+            <input
+                type="text"
+                value="Dhaka, Bangladesh">
 
-                </div>
-
-
-                <div class="content">
-
-                    <label>Address</label>
-
-                    <input type="text"
-                           name="address"
-                           value="Dhaka">
-
-                </div>
+        </div>
 
 
-                <div class="content">
+        <div class="form-group">
 
-                    <label>Status</label>
+            <label>Organization Type</label>
 
-                    <select name="status">
+            <select>
 
-                        <option>
-                            Active
-                        </option>
+                <option>NGO</option>
+                <option>Charity Organization</option>
+                <option>Medical Organization</option>
+                <option>Emergency Support Organization</option>
 
-                        <option>
-                            Pending
-                        </option>
+            </select>
 
-                        <option>
-                            Inactive
-                        </option>
-
-                    </select>
-
-                </div>
+        </div>
 
 
-                <div class="form-buttons">
+        <div class="form-group">
 
-                    <button type="submit"
-                            class="main-btn">
-                        Update Organization
-                    </button>
+            <label>Status</label>
 
-                    <button type="button"
-                            class="cancel-btn"
-                            onclick="openPage('organizations.html')">
-                        Cancel
-                    </button>
+            <select>
 
-                </div>
+                <option>Active</option>
+                <option>Pending</option>
+                <option>Rejected</option>
 
-            </form>
+            </select>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <button
+                class="main-btn blue-btn"
+                onclick="showMessage('Organization updated successfully')">
+
+                Update Organization
+
+            </button>
+
+
+            <button
+                class="back-btn"
+                onclick="goTo('organizations.html')">
+
+                Cancel
+
+            </button>
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>

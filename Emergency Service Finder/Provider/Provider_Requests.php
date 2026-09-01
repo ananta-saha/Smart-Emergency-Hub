@@ -289,7 +289,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $stmt = mysqli_prepare(
     $conn,
-    "SELECT
+    "SELECT 
         er.request_id,
         c.name AS citizen_name,
         er.emergency_type,
@@ -300,17 +300,14 @@ $stmt = mysqli_prepare(
      FROM emergency_requests er
      JOIN citizens c
         ON er.citizen_id = c.citizen_id
-
-     WHERE
+     WHERE 
         er.provider_id = ?
-
         OR
         (
             er.provider_id IS NULL
             AND er.service_type = ?
             AND er.status = 'Pending'
         )
-
      ORDER BY er.request_time DESC"
 );
 

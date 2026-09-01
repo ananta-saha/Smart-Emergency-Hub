@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+<div class="dashboard-container">
+
+
+    <div class="dashboard-header">
+
+        <h1>
+            Smart Emergency Hub
+        </h1>
+
+        <p>
+            Admin Dashboard | System Management Panel
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+
+        <div class="dashboard-card blue">
+
+            <div class="icon">
+                🏢
+            </div>
+
+            <h3>
+                Organizations
+            </h3>
+
+            <h2>
+                12
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-card green">
+
+            <div class="icon">
+                🚑
+            </div>
+
+            <h3>
+                Service Providers
+            </h3>
+
+            <h2>
+                25
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-card orange">
+
+            <div class="icon">
+                🔔
+            </div>
+
+            <h3>
+                Notifications
+            </h3>
+
+            <h2>
+                18
+            </h2>
+
+        </div>
+
+
+        <div class="dashboard-card purple">
+
+            <div class="icon">
+                💰
+            </div>
+
+            <h3>
+                Pending Funds
+            </h3>
+
+            <h2>
+                5
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="dashboard-menu">
+
+
+        <div class="menu-box">
+
+            <h2>
+                🏢 Organization Management
+            </h2>
+
+            <p>
+                Admin can view, add, edit and delete
+                registered organizations.
+            </p>
+
+            <button
+                onclick="goTo('organizations.html')">
+
+                Manage Organizations
+
+            </button>
+
+        </div>
+
+
+        <div class="menu-box">
+
+            <h2>
+                🚑 Service Provider Management
+            </h2>
+
+            <p>
+                Manage ambulance, hospital, police,
+                fire service and blood donor providers.
+            </p>
+
+            <button
+                onclick="goTo('service_providers.html')">
+
+                Manage Providers
+
+            </button>
+
+        </div>
+
+
+        <div class="menu-box">
+
+            <h2>
+                🔔 Notification Management
+            </h2>
+
+            <p>
+                Admin can send notifications and
+                view all system notifications.
+            </p>
+
+            <button
+                onclick="goTo('notifications.html')">
+
+                View Notifications
+
+            </button>
+
+        </div>
+
+
+        <div class="menu-box">
+
+            <h2>
+                💰 Fund Review
+            </h2>
+
+            <p>
+                Review organization fund requests
+                and approve or reject requests.
+            </p>
+
+            <button
+                onclick="goTo('fund_review.html')">
+
+                Review Funds
+
+            </button>
+
+        </div>
+
+
+        <div class="menu-box">
+
+            <h2>
+                👤 Admin Profile
+            </h2>
+
+            <p>
+                View and update administrator
+                account information.
+            </p>
+
+            <button
+                onclick="goTo('admin_profile.html')">
+
+                My Profile
+
+            </button>
+
+        </div>
+
+
+        <div class="menu-box">
+
+            <h2>
+                🚪 Logout
+            </h2>
+
+            <p>
+                Exit from the Smart Emergency Hub
+                administrator panel.
+            </p>
+
+            <button
+                onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

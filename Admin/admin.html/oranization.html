@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Organizations</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+<div class="content-container">
+
+
+    <div class="page-header">
+
+        <div>
+
+            <h1>
+                Organizations
+            </h1>
+
+            <p>
+                Manage registered organizations
+            </p>
+
+        </div>
+
+
+        <button
+            class="add-btn"
+            onclick="goTo('add_organization.html')">
+
+            + Add Organization
+
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Organization</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>01</td>
+
+                <td>
+                    Hope Foundation
+                </td>
+
+                <td>
+                    hope@gmail.com
+                </td>
+
+                <td>
+                    01711111111
+                </td>
+
+                <td>
+                    Dhaka
+                </td>
+
+                <td>
+                    <span class="status active">
+                        Active
+                    </span>
+                </td>
+
+                <td>
+
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_organization.html')">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteOrganization(1)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>02</td>
+
+                <td>
+                    Helping Hands
+                </td>
+
+                <td>
+                    help@gmail.com
+                </td>
+
+                <td>
+                    01822222222
+                </td>
+
+                <td>
+                    Mirpur
+                </td>
+
+                <td>
+                    <span class="status pending">
+                        Pending
+                    </span>
+                </td>
+
+                <td>
+
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_organization.html')">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteOrganization(2)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

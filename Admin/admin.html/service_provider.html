@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Service Providers</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="list-page">
+
+<div class="list-container">
+
+
+    <div class="list-header">
+
+        <div>
+
+            <h1>
+                Service Provider Management
+            </h1>
+
+            <p>
+                Manage all registered service providers
+            </p>
+
+        </div>
+
+        <button
+            class="add-btn green-btn"
+            onclick="goTo('add_service_provider.html')">
+
+            + Add Provider
+
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table class="green-table">
+
+            <tr>
+
+                <th>ID</th>
+                <th>Name</th>
+                <th>Service</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>01</td>
+
+                <td>Rahim Ahmed</td>
+
+                <td>Ambulance</td>
+
+                <td>rahim@gmail.com</td>
+
+                <td>01711111111</td>
+
+                <td>
+                    <span class="status active">
+                        Active
+                    </span>
+                </td>
+
+                <td>
+
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_service_provider.html')">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteProvider(1)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>02</td>
+
+                <td>Karim Hasan</td>
+
+                <td>Fire Service</td>
+
+                <td>karim@gmail.com</td>
+
+                <td>01822222222</td>
+
+                <td>
+                    <span class="status pending">
+                        Pending
+                    </span>
+                </td>
+
+                <td>
+
+                    <button
+                        class="edit-btn"
+                        onclick="goTo('edit_service_provider.html')">
+
+                        Edit
+
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteProvider(2)">
+
+                        Delete
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

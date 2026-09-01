@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Service Provider</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="page provider-page">
+
+    <div class="form-box">
+
+        <h1>Edit Service Provider</h1>
+
+        <p class="subtitle">
+            Update service provider information
+        </p>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    value="Rahim Ahmed">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Phone Number</label>
+
+                <input
+                    type="text"
+                    value="01711111111">
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    value="rahim@gmail.com">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Service Type</label>
+
+                <select>
+
+                    <option>Ambulance</option>
+                    <option>Hospital</option>
+                    <option>Fire Service</option>
+                    <option>Police</option>
+                    <option>Blood Donor</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Location</label>
+
+            <input
+                type="text"
+                value="Dhaka, Bangladesh">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Status</label>
+
+            <select>
+
+                <option>Active</option>
+                <option>Pending</option>
+                <option>Rejected</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="action-buttons">
+
+            <button
+                class="main-btn green-btn"
+                onclick="showMessage('Service provider updated successfully')">
+
+                Update Provider
+
+            </button>
+
+
+            <button
+                class="back-btn"
+                onclick="goTo('service_providers.html')">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

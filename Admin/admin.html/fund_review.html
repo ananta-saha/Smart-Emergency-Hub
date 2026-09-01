@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Fund Review</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="list-page">
+
+<div class="list-container">
+
+
+    <div class="list-header">
+
+        <div>
+
+            <h1>
+                Fund Review
+            </h1>
+
+            <p>
+                Review organization fund requests
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table class="orange-table">
+
+            <tr>
+
+                <th>ID</th>
+                <th>Organization</th>
+                <th>Amount</th>
+                <th>Purpose</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>01</td>
+
+                <td>
+                    Hope Foundation
+                </td>
+
+                <td>
+                    ৳50,000
+                </td>
+
+                <td>
+                    Emergency Support
+                </td>
+
+                <td>
+                    31 Aug 2026
+                </td>
+
+                <td>
+
+                    <span class="status pending">
+                        Pending
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="approve-btn"
+                        onclick="approveFund(1)">
+
+                        Approve
+
+                    </button>
+
+                    <button
+                        class="reject-btn"
+                        onclick="rejectFund(1)">
+
+                        Reject
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>02</td>
+
+                <td>
+                    Helping Hands
+                </td>
+
+                <td>
+                    ৳30,000
+                </td>
+
+                <td>
+                    Medical Support
+                </td>
+
+                <td>
+                    30 Aug 2026
+                </td>
+
+                <td>
+
+                    <span class="status pending">
+                        Pending
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="approve-btn"
+                        onclick="approveFund(2)">
+
+                        Approve
+
+                    </button>
+
+                    <button
+                        class="reject-btn"
+                        onclick="rejectFund(2)">
+
+                        Reject
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="form-box">
+
+    <h1>
+        Admin Profile
+    </h1>
+
+    <p class="subtitle">
+        View and update administrator information
+    </p>
+
+
+    <div class="form-group">
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            value="Admin User">
+
+    </div>
+
+
+    <div class="form-row">
+
+        <div class="form-group">
+
+            <label>
+                Email
+            </label>
+
+            <input
+                type="email"
+                value="admin@gmail.com">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Phone Number
+            </label>
+
+            <input
+                type="text"
+                value="01711111111">
+
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label>
+            Role
+        </label>
+
+        <input
+            type="text"
+            value="Administrator"
+            readonly>
+
+    </div>
+
+
+    <div class="action-buttons">
+
+        <button
+            class="main-btn orange-btn"
+            onclick="showMessage('Profile updated successfully')">
+
+            Update Profile
+
+        </button>
+
+        <button
+            class="back-btn"
+            onclick="goTo('admin_dashboard.html')">
+
+            Back
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

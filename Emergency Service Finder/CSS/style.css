@@ -693,3 +693,40 @@ table th {
     }
 
 }
+
+/* PHP form validation */
+
+.form-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+.signup-link {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #555;
+
+}
+
+
+.signup-link a {
+
+    color: #c62828;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+.signup-link a:hover {
+
+    text-decoration: underline;
+
+}
